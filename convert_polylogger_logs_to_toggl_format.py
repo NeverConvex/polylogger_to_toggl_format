@@ -35,7 +35,7 @@ def convert():
             duration = 60 * int(duration.strip())
             date2data_wStartTime_dict[date].append( (descr, proj, str(datetime.timedelta(seconds=duration)), str(datetime.timedelta(seconds=start_time))) )
             date2data_wStartTime_dict[date].append( (
-                            str(datetime.timedelta(seconds=duration)), str(datetime.timedelta(seconds=start_time))), date, descr, proj)
+                            str(datetime.timedelta(seconds=duration)), str(datetime.timedelta(seconds=start_time)), date, descr, proj) )
             start_time += duration + 1 # Next activity begins 1 second after last activity ended
 
     with open("toggl_format_output.txt", 'w') as wf:
